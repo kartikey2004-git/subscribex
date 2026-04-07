@@ -1,15 +1,12 @@
 # SubscribeX
 
 On-chain content paywall built on Stellar. Creators post content hashes (IPFS CIDs or any hash). The smart contract gates access — only wallets with an active subscription can read the real hash. Subscriptions are paid in XLM and enforced entirely on-chain.
-
 ## Live Links
 
 | | |
 |---|---|
 | **Frontend** | `https://subscribex.vercel.app` |
-| **GitHub** | `https://github.com/YOUR_USERNAME/subscribex` |
-| **Contract** | `https://stellar.expert/explorer/testnet/contract/CONTRACT_ID` |
-| **Proof TX** | `https://stellar.expert/explorer/testnet/tx/TX_HASH` |
+| **Contract** | `https://stellar.expert/explorer/testnet/contract/CBKR46Q3QINXTFKH6TZYW2OO7KKQETZGHFLZ3CHUMOPUAKSF3JIXJJMQ` |
 
 ## How It Works
 
