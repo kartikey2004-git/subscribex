@@ -1,12 +1,13 @@
 # SubscribeX
 
 On-chain content paywall built on Stellar. Creators post content hashes (IPFS CIDs or any hash). The smart contract gates access — only wallets with an active subscription can read the real hash. Subscriptions are paid in XLM and enforced entirely on-chain.
+
 ## Live Links
 
 | | |
 |---|---|
 | **Frontend** | `https://subscribex.vercel.app` |
-| **Contract** | `https://stellar.expert/explorer/testnet/contract/CBKR46Q3QINXTFKH6TZYW2OO7KKQETZGHFLZ3CHUMOPUAKSF3JIXJJMQ` |
+| **Contract** | `https://stellar.expert/explorer/testnet/contract/CDCQSZ7WZBBKPQTSVT7LWSPDFCYQOQGSFNEGHAPBI5M7BKY6CSN4FLYB` |
 
 ## How It Works
 
@@ -17,6 +18,16 @@ On-chain content paywall built on Stellar. Creators post content hashes (IPFS CI
 5. Active subscribers call `get_content(subscriber, content_id)` to retrieve the real hash
 6. Access is verified by comparing `subscription.expires_at >= current_ledger`
 
+## Why This Project Matters
+
+This project turns a familiar real-world workflow into a verifiable on-chain primitive on Stellar: transparent state transitions, user-authenticated actions, and deterministic outcomes.
+
+## Architecture
+
+- **Smart Contract Layer**: Soroban contract enforces business rules, authorization, and state transitions.
+- **Client Layer**: React + Vite frontend handles wallet UX, transaction composition, and real-time status views.
+- **Wallet/Auth Layer**: Freighter signs every state-changing action so operations are attributable and non-repudiable.
+- **Infra Layer**: Stellar Testnet + Soroban RPC for execution; Vercel for frontend hosting.
 ## Contract Functions
 
 ```rust
@@ -48,3 +59,5 @@ content_count() -> u32
 chmod +x scripts/deploy.sh && ./scripts/deploy.sh
 cd frontend && npm install && npm run dev
 ```
+
+
